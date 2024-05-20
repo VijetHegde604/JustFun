@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+
+.title{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px transparent ;
+    width: fit-content;
+    height: 100%;
+    padding: 8px;
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 10px;
+
+    animation: rotate 4s linear infinite;
+    overflow: hidden;
+}
+.title::before,
+.title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: solid 2px transparent;
+    border-radius: 5px;
+    pointer-events: none; /* Prevents mouse interaction with the borders */
+}
+
+.title::before {
+    top: -2px;
+    left: -2px;
+    animation: rotate 4s linear infinite;
+}
+
+.title::after {
+    bottom: -2px;
+    right: -2px;
+    animation: rotateReverse 4s linear infinite;
+}
+@keyframes rotate {
+    0%   {border-color: red;}
+    25%  {border-color: yellow;}
+    50%  {border-color: blue;}
+    100% {border-color: green;}
+}
+
+@keyframes rotateReverse {
+    0%   {border-color: green;}
+    25%  {border-color: blue;}
+    50%  {border-color: yellow;}
+    100% {border-color: red;}
+}
+
+h2{
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+h3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.die{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+img{
+    margin: 10px;
+    width: auto;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    font-size: large;
+    font-weight: bold;
+    width: 200px; 
+    height: 50px; 
+    border: solid 1px aqua;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+footer {
+    margin-top: 5%;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+  }
+
+.image2,.image1{
+    margin: 3px;
+    padding: 5px;
+}
+
+@media(max-width:600px){
+.die{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+}
